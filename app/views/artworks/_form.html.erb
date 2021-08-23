@@ -1,0 +1,102 @@
+<%= form_with(model: artwork) do |form| %>
+  <% if artwork.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(artwork.errors.count, "error") %> prohibited this artwork from being saved:</h2>
+
+      <ul>
+        <% artwork.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :art_id %>
+    <%= form.number_field :art_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :api_link %>
+    <%= form.text_field :api_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_display %>
+    <%= form.text_field :date_display %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place_of_origin %>
+    <%= form.text_field :place_of_origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dimensions %>
+    <%= form.text_field :dimensions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medium_display %>
+    <%= form.text_field :medium_display %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gallery_title %>
+    <%= form.text_field :gallery_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artwork_type_title %>
+    <%= form.text_field :artwork_type_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department_title %>
+    <%= form.text_field :department_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :artist_title %>
+    <%= form.text_field :artist_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style_title %>
+    <%= form.text_field :style_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classification_title %>
+    <%= form.text_field :classification_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_id %>
+    <%= form.text_field :image_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_link %>
+    <%= form.text_field :image_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
